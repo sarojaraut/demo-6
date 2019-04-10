@@ -75,13 +75,13 @@ declare
             from course c
         ]';
 begin
-    -- ords.enable_schema(
-    --     p_enabled             => true,
-    --     p_schema              => 'sarojws',
-    --     p_url_mapping_type    => 'base_path',
-    --     p_url_mapping_pattern => 'sarojapi',
-    --     p_auto_rest_auth      => false
-    -- );
+    ords.enable_schema(
+        p_enabled             => true,
+        p_schema              => user,
+        p_url_mapping_type    => 'BASE_PATH',
+        p_url_mapping_pattern => 'sarojapi',
+        p_auto_rest_auth      => false
+    );
     --
     -- main module template and handler
     --
