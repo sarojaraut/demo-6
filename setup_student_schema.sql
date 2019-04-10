@@ -1,6 +1,6 @@
+drop table enrollment;
 drop table course;
 drop table student;
-drop table enrollment;
 
 drop sequence course_seq;
 drop sequence student_seq;
@@ -30,7 +30,9 @@ create table enrollment(
     course_id         number,
     created_dtm       timestamp,
     changed_dtm       timestamp,
-    primary key(id)
+    CONSTRAINT pk_enrollment primary key(id),
+    CONSTRAINT fk_enrollment_1 foreign key(student_id) references student(Id),
+    CONSTRAINT fk_enrollment_2 foreign key(course_id) references course(Id)
 );
 
 create sequence course_seq     start with 1 increment by 1;

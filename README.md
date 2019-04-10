@@ -27,6 +27,10 @@ Table Name | Record Count | Description
 `student`| 10 | Holds details of registered students.
 `enrollment` | 18 | Holds details students enrolled for course.
 
+## Data model
+
+![Screenshot](studentdatamodel.png)
+
 ## Rest End Points
 
 1. API `GET students/v1/` returns all data from course table in json format : https://apex.oracle.com/pls/apex/sarojapi/students/v1/
